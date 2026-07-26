@@ -3,425 +3,327 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Privacy Policy | My Scheduler</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<title>Privacy Policy — My Scheduler</title>
 <style>
-
-:root{
-
---primary:#2563eb;
---primary-light:#dbeafe;
---text:#111827;
---secondary:#6b7280;
---border:#e5e7eb;
---bg:#f8fafc;
---card:#ffffff;
---radius:22px;
-
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-body{
-
-background:var(--bg);
-color:var(--text);
-line-height:1.8;
-
-}
-
-.hero{
-
-background:linear-gradient(135deg,#2563eb,#3b82f6,#60a5fa);
-padding:90px 20px;
-text-align:center;
-color:white;
-
-}
-
-.hero h1{
-
-font-size:52px;
-font-weight:800;
-margin-bottom:18px;
-
-}
-
-.hero p{
-
-max-width:760px;
-margin:auto;
-font-size:18px;
-opacity:.95;
-
-}
-
-.container{
-
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-
-}
-
-.card{
-
-background:white;
-border-radius:var(--radius);
-padding:45px;
-margin-bottom:28px;
-box-shadow:0 15px 40px rgba(0,0,0,.06);
-border:1px solid var(--border);
-
-}
-
-.card h2{
-
-color:var(--primary);
-margin-bottom:18px;
-font-size:28px;
-
-}
-
-.card p{
-
-color:var(--secondary);
-margin-bottom:16px;
-
-}
-
-.card ul{
-
-padding-left:25px;
-
-}
-
-.card li{
-
-margin:10px 0;
-color:var(--secondary);
-
-}
-
-.badges{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:30px;
-
-}
-
-.badge{
-
-background:var(--primary-light);
-padding:22px;
-border-radius:18px;
-text-align:center;
-
-}
-
-.badge h3{
-
-color:var(--primary);
-font-size:18px;
-margin-bottom:10px;
-
-}
-
-.badge p{
-
-color:#374151;
-
-}
-
-footer{
-
-text-align:center;
-padding:45px 20px;
-color:#6b7280;
-
-}
-
-.contact{
-
-background:#eff6ff;
-padding:25px;
-border-radius:18px;
-border:1px solid #bfdbfe;
-
-}
-
-.contact strong{
-
-color:var(--primary);
-
-}
-
-.updated{
-
-display:inline-block;
-margin-top:18px;
-padding:8px 18px;
-border-radius:100px;
-background:rgba(255,255,255,.18);
-backdrop-filter:blur(12px);
-
-}
-
-@media(max-width:768px){
-
-.hero{
-
-padding:70px 20px;
-
-}
-
-.hero h1{
-
-font-size:36px;
-
-}
-
-.card{
-
-padding:28px;
-
-}
-
-.card h2{
-
-font-size:24px;
-
-}
-
-}
-
+  :root {
+    --text: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #dfe2e6;
+    --bg-soft: #f6f7f9;
+    --accent: #2054a6;
+    --max: 1100px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.55;
+    background: #fff;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 28px 24px;
+  }
+  .wrap { max-width: var(--max); margin: 0 auto; }
+  header h1 { margin: 0 0 6px; font-size: 26px; }
+  header p { margin: 2px 0; color: var(--muted); font-size: 14px; }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px 24px;
+    margin-top: 14px;
+    font-size: 14px;
+  }
+  .meta-grid div span { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .03em; }
+  main { padding: 32px 24px 60px; }
+  .toc {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-bottom: 36px;
+  }
+  .toc h2 { font-size: 15px; margin: 0 0 10px; }
+  .toc ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 4px 20px;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+  .toc a { color: var(--accent); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  section {
+    border-top: 1px solid var(--border);
+    padding: 22px 0;
+  }
+  section h2 {
+    font-size: 17px;
+    margin: 0 0 10px;
+  }
+  section p { margin: 0 0 10px; font-size: 14.5px; color: #2b2b2b; }
+
+  .cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  ul.plain { margin: 6px 0; padding-left: 18px; font-size: 14.5px; }
+  ul.plain li { margin-bottom: 3px; }
+  ul.grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 4px 16px;
+    list-style: none;
+    padding: 0;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  ul.grid-list li {
+    padding-left: 14px;
+    position: relative;
+    color: #333;
+  }
+  ul.grid-list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+  }
+  .card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 18px;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 24px;
+    font-size: 14.5px;
+  }
+  .contact-grid span { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 18px 24px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media (max-width: 700px) {
+    .cols-2 { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
-
 <body>
 
-<section class="hero">
-
-<h1>Privacy Policy</h1>
-
-<p>
-Your privacy matters. My Scheduler is built to help students organise their academic life while keeping personal information secure and under your control.
-</p>
-
-<div class="updated">
-Effective Date: July 26, 2026
-</div>
-
-</section>
-
-<div class="container">
-
-<div class="card">
-
-<h2>Introduction</h2>
-
-<p>
-Thank you for using <strong>My Scheduler</strong>. This Privacy Policy explains how information is handled when you use our application.
-</p>
-
-<p>
-My Scheduler is designed with privacy in mind. Most features work entirely offline, and your academic data remains stored on your own device.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Information Stored</h2>
-
-<p>The app may locally store information including:</p>
-
-<ul>
-<li>Class schedules</li>
-<li>Subjects</li>
-<li>Attendance records</li>
-<li>Tasks</li>
-<li>Examinations</li>
-<li>Holiday calendar</li>
-<li>Reminder settings</li>
-<li>Notes</li>
-<li>User preferences</li>
-</ul>
-
-<p>
-This information is stored only on your device unless you intentionally export or share it.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Personal Information</h2>
-
-<p>My Scheduler does not require account registration.</p>
-
-<ul>
-<li>No Name Collection</li>
-<li>No Email Collection</li>
-<li>No Phone Number Collection</li>
-<li>No Financial Information</li>
-<li>No Government ID Collection</li>
-<li>No Contact Collection</li>
-<li>No Location Tracking</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Notifications</h2>
-
-<p>
-The application uses Android local notifications to remind you about classes, assignments, exams, attendance goals and custom reminders.
-</p>
-
-<p>
-These notifications are generated directly on your device and are not sent through our servers.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Permissions Used</h2>
-
-<ul>
-<li>Notification Permission</li>
-<li>Exact Alarm Permission (if supported by your Android version)</li>
-<li>Schedule Exact Alarm Permission (if applicable)</li>
-</ul>
-
-<p>
-These permissions are only used to provide reminder functionality.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Data Sharing</h2>
-
-<p>
-We do not sell, rent, trade or share your personal information with third parties.
-</p>
-
-<p>
-All academic information remains under your control on your own device.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Security</h2>
-
-<p>
-Reasonable security measures are used to protect the application's stored information. Since your data remains on your own device, keeping your phone protected with a secure lock screen is recommended.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Delete Your Data</h2>
-
-<p>You may remove your data at any time by:</p>
-
-<ul>
-<li>Deleting records inside the app</li>
-<li>Clearing app storage from Android Settings</li>
-<li>Uninstalling My Scheduler</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Google Play Data Safety</h2>
-
-<div class="badges">
-
-<div class="badge">
-<h3>No Personal Data</h3>
-<p>No personal information is collected.</p>
-</div>
-
-<div class="badge">
-<h3>No Data Sharing</h3>
-<p>Your information is never sold or shared.</p>
-</div>
-
-<div class="badge">
-<h3>Offline First</h3>
-<p>Most features work without internet.</p>
-</div>
-
-<div class="badge">
-<h3>User Control</h3>
-<p>You can delete your data anytime.</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Policy Updates</h2>
-
-<p>
-This Privacy Policy may be updated occasionally to reflect improvements or legal requirements. Changes become effective immediately after publication on this page.
-</p>
-
-</div>
-
-<div class="card contact">
-
-<h2>Contact Us</h2>
-
-<p>
-If you have any questions regarding this Privacy Policy, please contact us.
-</p>
-
-<p>
-
-<strong>Developer</strong><br>
-My Scheduler Team
-
-</p>
-
-<p>
-
-<strong>Email</strong><br>
-support@myscheduler.app
-
-</p>
-
-</div>
-
-</div>
+<header>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p>My Scheduler — an offline personal academic planner for students.</p>
+    <div class="meta-grid">
+      <div><span>Effective Date</span>26 July 2026</div>
+      <div><span>Package Name</span>com.myscheduler.app</div>
+      <div><span>Developer</span>Pabitra Khandual</div>
+      <div><span>Contact</span><a href="mailto:hello.myscheduler@gmail.com">hello.myscheduler@gmail.com</a></div>
+      <div><span>Policy URL</span><a href="https://my-scheduler.github.io/privacy.html">my-scheduler.github.io/privacy.html</a></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Introduction</a></li>
+      <li><a href="#s2">Scope</a></li>
+      <li><a href="#s3">Privacy by Design</a></li>
+      <li><a href="#s4">Information We Collect</a></li>
+      <li><a href="#s5">Information We Do Not Collect</a></li>
+      <li><a href="#s6">Local Data Storage</a></li>
+      <li><a href="#s7">No Internet Communication</a></li>
+      <li><a href="#s8">Permissions</a></li>
+      <li><a href="#s9">Import & Export</a></li>
+      <li><a href="#s10">Data Security</a></li>
+      <li><a href="#s11">Retention & Deletion</a></li>
+      <li><a href="#s12">No User Accounts</a></li>
+      <li><a href="#s13">Third-Party Services & Advertising</a></li>
+      <li><a href="#s14">Children's Privacy</a></li>
+      <li><a href="#s15">International Users</a></li>
+      <li><a href="#s16">Google Play Compliance</a></li>
+      <li><a href="#s17">User Rights</a></li>
+      <li><a href="#s18">Future Features</a></li>
+      <li><a href="#s19">Policy Changes</a></li>
+      <li><a href="#s20">Liability & Governing Law</a></li>
+      <li><a href="#s21">Contact</a></li>
+    </ol>
+  </div>
+
+  <section id="s1">
+    <h2>1. Introduction</h2>
+    <p>My Scheduler is an offline personal academic planner that helps students organise classes, attendance, exams, assignments, tasks, notes, reminders, and schedules. The App follows a privacy-first approach: most features run entirely on-device, and your information stays under your control. By using the App, you agree to this Privacy Policy.</p>
+  </section>
+
+  <section id="s2">
+    <h2>2. Scope</h2>
+    <p>This policy applies only to the Android app <strong>My Scheduler</strong> (com.myscheduler.app), covering data processing, local storage, permissions, security, user rights, retention, import/export, and contact information. It does not apply to any third-party site or service.</p>
+  </section>
+
+  <section id="s3">
+    <h2>3. Privacy by Design</h2>
+    <div class="card">
+      <ul class="grid-list">
+        <li>No mandatory registration</li>
+        <li>No cloud account required</li>
+        <li>No remote database</li>
+        <li>No online profile</li>
+        <li>No behavioural tracking</li>
+        <li>No ad or analytics SDKs</li>
+        <li>No unnecessary permissions</li>
+        <li>No sale of user data</li>
+        <li>Local-first storage</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="s4">
+    <h2>4. Information We Collect</h2>
+    <p>The App lets you create and manage: display name (optional), semester and subject details, timetable, attendance records, lecture and lab schedules, assignments, tasks, notes, holidays, exam schedules, reminder preferences, attendance goals, and app/theme/notification settings. All of it is entered by you and stored only in the App's local Room Database — the developer cannot access it remotely. An optional display name is never uploaded, shared, or used for advertising.</p>
+  </section>
+
+  <section id="s5">
+    <h2>5. Information We Do Not Collect</h2>
+    <div class="card">
+      <ul class="grid-list">
+        <li>Full legal name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Home address</li>
+        <li>Government ID / Aadhaar / PAN</li>
+        <li>Banking / card / UPI info</li>
+        <li>Passwords</li>
+        <li>Contacts, SMS, call history</li>
+        <li>Calendar events</li>
+        <li>Location / GPS data</li>
+        <li>Microphone or camera data</li>
+        <li>Biometric or health data</li>
+        <li>Browsing / search history</li>
+        <li>Advertising identifiers</li>
+        <li>Social media accounts</li>
+      </ul>
+    </div>
+    <p>The App collects only what is necessary to provide the features you request — your timetable, attendance, reminders, and notes belong to you.</p>
+  </section>
+
+  <section id="s6">
+    <h2>6. Local Data Storage</h2>
+    <p>All data — subjects, attendance, timetable entries, reminders, tasks, exams, notes, holidays, and settings — is stored locally in a Room Database on your device. The developer has no ability to access, read, copy, or modify it remotely.</p>
+  </section>
+
+  <section id="s7">
+    <h2>7. No Internet Communication</h2>
+    <p>Core features work without an internet connection. No app data, attendance records, notes, or reminders are uploaded or synchronised to developer servers, and no background communication occurs for analytics or advertising. Any future online feature will be disclosed here before release.</p>
+  </section>
+
+  <section id="s8">
+    <h2>8. Permissions</h2>
+    <div class="cols-2">
+      <div>
+        <p><strong>Requested:</strong> Notification permission, used only to show reminders you create (classes, exams, assignments, attendance, study reminders). Notifications are generated on-device and never transmitted.</p>
+      </div>
+      <div>
+        <p><strong>Not requested:</strong></p>
+        <ul class="plain">
+          <li>Camera, microphone</li>
+          <li>Contacts, SMS, phone</li>
+          <li>Location, calendar</li>
+          <li>Bluetooth / nearby devices</li>
+          <li>Body sensors, activity recognition</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="s9">
+    <h2>9. Import and Export</h2>
+    <p>The optional backup feature is user-initiated. Exported files are saved to a location you choose and never reach the developer or any server. Imported files are read and merged locally only. You are responsible for safeguarding any exported backup files.</p>
+  </section>
+
+  <section id="s10">
+    <h2>10. Data Security</h2>
+    <p>Safeguards include local storage via Room Database, no developer-managed remote database, no automatic data transmission, least-privilege permissions, and an offline-first architecture. No method guarantees absolute security — keep your device and screen lock updated, and manage exported backups securely.</p>
+  </section>
+
+  <section id="s11">
+    <h2>11. Retention and Deletion</h2>
+    <p>Data stays on your device until you delete individual entries, clear app data via Android Settings, import a replacing backup, or uninstall the App. The developer holds no copies and cannot recover deleted data. Since no remote database exists, there is nothing to delete on the developer's side.</p>
+  </section>
+
+  <section id="s12">
+    <h2>12. No User Accounts</h2>
+    <p>No registration is required — no username, password, email/phone verification, or social login (Google, Facebook, Apple) is needed to use any feature.</p>
+  </section>
+
+  <section id="s13">
+    <h2>13. Third-Party Services and Advertising</h2>
+    <p>The App does not integrate AdMob, Firebase (Analytics, Crashlytics, FCM), Google/Facebook sign-in, or any third-party analytics/advertising SDK. It shows no banner, interstitial, or rewarded ads, and does not profile users or sell data for advertising. Any future integration will be disclosed here in advance.</p>
+  </section>
+
+  <section id="s14">
+    <h2>14. Children's Privacy</h2>
+    <p>My Scheduler is built for students organising academic activity and is not directed at children below the age of consent under applicable law. Since data stays on-device with no registration, the developer does not knowingly receive personal information from children. Contact us if you believe otherwise.</p>
+  </section>
+
+  <section id="s15">
+    <h2>15. International Users</h2>
+    <p>Because user data is never transmitted to developer servers, no personal information is intentionally transferred across borders. Users remain responsible for complying with local laws.</p>
+  </section>
+
+  <section id="s16">
+    <h2>16. Google Play Compliance</h2>
+    <p>The developer complies with applicable Google Play policies on privacy, data transparency, minimisation, permissions, security, and consent. The Play Store's Data Safety section reflects the App's current practices.</p>
+  </section>
+
+  <section id="s17">
+    <h2>17. User Rights</h2>
+    <p>Since your data lives on your own device, you directly control accessing, correcting, exporting, or deleting it without needing to contact the developer. These actions are carried out within the App or via device settings.</p>
+  </section>
+
+  <section id="s18">
+    <h2>18. Future Features</h2>
+    <p>If features such as cloud sync, accounts, analytics, crash reporting, advertising, or subscriptions are introduced, this policy will be updated beforehand, with any new data practices disclosed.</p>
+  </section>
+
+  <section id="s19">
+    <h2>19. Changes to This Policy</h2>
+    <p>This policy may be revised to reflect app improvements or legal requirements. The Effective Date will be updated and the latest version published at the policy URL above. Continued use after an update constitutes acceptance.</p>
+  </section>
+
+  <section id="s20">
+    <h2>20. Liability and Governing Law</h2>
+    <p>The App is provided "as is." The developer is not liable for loss of local data, device malfunction, user error, backup corruption, unauthorised device access, or force majeure events. Regular backups via the export feature are recommended. This policy is governed by the laws of India, with disputes subject to Indian courts.</p>
+  </section>
+
+  <section id="s21">
+    <h2>21. Contact</h2>
+    <div class="card contact-grid">
+      <div><span>Developer</span>Pabitra Khandual</div>
+      <div><span>Application</span>My Scheduler</div>
+      <div><span>Package</span>com.myscheduler.app</div>
+      <div><span>Email</span><a href="mailto:hello.myscheduler@gmail.com">hello.myscheduler@gmail.com</a></div>
+      <div><span>Policy URL</span><a href="https://my-scheduler.github.io/privacy.html">my-scheduler.github.io/privacy.html</a></div>
+    </div>
+    <p style="margin-top:12px;">By using My Scheduler, you acknowledge you've read this policy, understand your data is stored locally on your device, and accept responsibility for protecting exported backups and securing your device.</p>
+  </section>
+
+</main>
 
 <footer>
-
-© 2026 My Scheduler. All Rights Reserved.
-
+  © 2026 Pabitra Khandual — My Scheduler Privacy Policy
 </footer>
 
 </body>
