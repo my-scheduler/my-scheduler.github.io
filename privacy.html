@@ -1,330 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Privacy Policy — My Scheduler</title>
+<meta name="description" content="Privacy Policy for My Scheduler — your complete academic buddy app." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          display: ['Space Grotesk', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
-  :root {
-    --text: #1a1a1a;
-    --muted: #5a5a5a;
-    --border: #dfe2e6;
-    --bg-soft: #f6f7f9;
-    --accent: #2054a6;
-    --max: 1100px;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-    color: var(--text);
-    line-height: 1.55;
-    background: #fff;
-  }
-  header {
-    border-bottom: 1px solid var(--border);
-    padding: 28px 24px;
-  }
-  .wrap { max-width: var(--max); margin: 0 auto; }
-  header h1 { margin: 0 0 6px; font-size: 26px; }
-  header p { margin: 2px 0; color: var(--muted); font-size: 14px; }
-  .meta-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 8px 24px;
-    margin-top: 14px;
-    font-size: 14px;
-  }
-  .meta-grid div span { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .03em; }
-  main { padding: 32px 24px 60px; }
-  .toc {
-    background: var(--bg-soft);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 18px 22px;
-    margin-bottom: 36px;
-  }
-  .toc h2 { font-size: 15px; margin: 0 0 10px; }
-  .toc ol {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 4px 20px;
-    margin: 0;
-    padding-left: 20px;
-    font-size: 14px;
-  }
-  .toc a { color: var(--accent); text-decoration: none; }
-  .toc a:hover { text-decoration: underline; }
-
-  section {
-    border-top: 1px solid var(--border);
-    padding: 22px 0;
-  }
-  section h2 {
-    font-size: 17px;
-    margin: 0 0 10px;
-  }
-  section p { margin: 0 0 10px; font-size: 14.5px; color: #2b2b2b; }
-
-  .cols-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-  }
-  ul.plain { margin: 6px 0; padding-left: 18px; font-size: 14.5px; }
-  ul.plain li { margin-bottom: 3px; }
-  ul.grid-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 4px 16px;
-    list-style: none;
-    padding: 0;
-    margin: 8px 0;
-    font-size: 14px;
-  }
-  ul.grid-list li {
-    padding-left: 14px;
-    position: relative;
-    color: #333;
-  }
-  ul.grid-list li::before {
-    content: "–";
-    position: absolute;
-    left: 0;
-    color: var(--muted);
-  }
-  .card {
-    background: var(--bg-soft);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 16px 18px;
-  }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px 24px;
-    font-size: 14.5px;
-  }
-  .contact-grid span { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; }
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 18px 24px;
-    font-size: 13px;
-    color: var(--muted);
-    text-align: center;
-  }
-  @media (max-width: 700px) {
-    .cols-2 { grid-template-columns: 1fr; }
-  }
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(120,120,140,0.25); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(120,120,140,0.4); }
 </style>
 </head>
-<body>
+<body class="min-h-screen bg-white dark:bg-[#030712] font-sans text-neutral-800 dark:text-slate-200 transition-colors duration-300">
 
-<header>
-  <div class="wrap">
-    <h1>Privacy Policy</h1>
-    <p>My Scheduler — an offline personal academic planner for students.</p>
-    <div class="meta-grid">
-      <div><span>Effective Date</span>26 July 2026</div>
-      <div><span>Package Name</span>com.myscheduler.app</div>
-      <div><span>Developer</span>Pabitra Khandual</div>
-      <div><span>Contact</span><a href="mailto:hello.myscheduler@gmail.com">hello.myscheduler@gmail.com</a></div>
-      <div><span>Policy URL</span><a href="https://my-scheduler.github.io/privacy.html">my-scheduler.github.io/privacy.html</a></div>
-    </div>
-  </div>
-</header>
+<!-- ============ NAVBAR ============ -->
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 cursor-pointer group">
+        <img src="https://i.ibb.co/ns7wbV9Y/custom-app-icon.png" alt="My Scheduler Logo" referrerpolicy="no-referrer"
+          class="w-9 h-9 rounded-lg object-contain transition-transform group-hover:scale-105 shadow-md" />
+        <div class="flex flex-col justify-center">
+          <span class="font-display font-bold text-lg tracking-tight text-neutral-900 dark:text-white block leading-none">My Scheduler</span>
+          <span class="text-[8px] font-mono tracking-widest text-neutral-400 dark:text-slate-500 uppercase mt-0.5 leading-none block">YOUR SEMESTER CO-PILOT</span>
+        </div>
+      </a>
 
-<main class="wrap">
-
-  <div class="toc">
-    <h2>Contents</h2>
-    <ol>
-      <li><a href="#s1">Introduction</a></li>
-      <li><a href="#s2">Scope</a></li>
-      <li><a href="#s3">Privacy by Design</a></li>
-      <li><a href="#s4">Information We Collect</a></li>
-      <li><a href="#s5">Information We Do Not Collect</a></li>
-      <li><a href="#s6">Local Data Storage</a></li>
-      <li><a href="#s7">No Internet Communication</a></li>
-      <li><a href="#s8">Permissions</a></li>
-      <li><a href="#s9">Import & Export</a></li>
-      <li><a href="#s10">Data Security</a></li>
-      <li><a href="#s11">Retention & Deletion</a></li>
-      <li><a href="#s12">No User Accounts</a></li>
-      <li><a href="#s13">Third-Party Services & Advertising</a></li>
-      <li><a href="#s14">Children's Privacy</a></li>
-      <li><a href="#s15">International Users</a></li>
-      <li><a href="#s16">Google Play Compliance</a></li>
-      <li><a href="#s17">User Rights</a></li>
-      <li><a href="#s18">Future Features</a></li>
-      <li><a href="#s19">Policy Changes</a></li>
-      <li><a href="#s20">Liability & Governing Law</a></li>
-      <li><a href="#s21">Contact</a></li>
-    </ol>
-  </div>
-
-  <section id="s1">
-    <h2>1. Introduction</h2>
-    <p>My Scheduler is an offline personal academic planner that helps students organise classes, attendance, exams, assignments, tasks, notes, reminders, and schedules. The App follows a privacy-first approach: most features run entirely on-device, and your information stays under your control. By using the App, you agree to this Privacy Policy.</p>
-  </section>
-
-  <section id="s2">
-    <h2>2. Scope</h2>
-    <p>This policy applies only to the Android app <strong>My Scheduler</strong> (com.myscheduler.app), covering data processing, local storage, permissions, security, user rights, retention, import/export, and contact information. It does not apply to any third-party site or service.</p>
-  </section>
-
-  <section id="s3">
-    <h2>3. Privacy by Design</h2>
-    <div class="card">
-      <ul class="grid-list">
-        <li>No mandatory registration</li>
-        <li>No cloud account required</li>
-        <li>No remote database</li>
-        <li>No online profile</li>
-        <li>No behavioural tracking</li>
-        <li>No ad or analytics SDKs</li>
-        <li>No unnecessary permissions</li>
-        <li>No sale of user data</li>
-        <li>Local-first storage</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="s4">
-    <h2>4. Information We Collect</h2>
-    <p>The App lets you create and manage: display name (optional), semester and subject details, timetable, attendance records, lecture and lab schedules, assignments, tasks, notes, holidays, exam schedules, reminder preferences, attendance goals, and app/theme/notification settings. All of it is entered by you and stored only in the App's local Room Database — the developer cannot access it remotely. An optional display name is never uploaded, shared, or used for advertising.</p>
-  </section>
-
-  <section id="s5">
-    <h2>5. Information We Do Not Collect</h2>
-    <div class="card">
-      <ul class="grid-list">
-        <li>Full legal name</li>
-        <li>Email address</li>
-        <li>Phone number</li>
-        <li>Home address</li>
-        <li>Government ID / Aadhaar / PAN</li>
-        <li>Banking / card / UPI info</li>
-        <li>Passwords</li>
-        <li>Contacts, SMS, call history</li>
-        <li>Calendar events</li>
-        <li>Location / GPS data</li>
-        <li>Microphone or camera data</li>
-        <li>Biometric or health data</li>
-        <li>Browsing / search history</li>
-        <li>Advertising identifiers</li>
-        <li>Social media accounts</li>
-      </ul>
-    </div>
-    <p>The App collects only what is necessary to provide the features you request — your timetable, attendance, reminders, and notes belong to you.</p>
-  </section>
-
-  <section id="s6">
-    <h2>6. Local Data Storage</h2>
-    <p>All data — subjects, attendance, timetable entries, reminders, tasks, exams, notes, holidays, and settings — is stored locally in a Room Database on your device. The developer has no ability to access, read, copy, or modify it remotely.</p>
-  </section>
-
-  <section id="s7">
-    <h2>7. No Internet Communication</h2>
-    <p>Core features work without an internet connection. No app data, attendance records, notes, or reminders are uploaded or synchronised to developer servers, and no background communication occurs for analytics or advertising. Any future online feature will be disclosed here before release.</p>
-  </section>
-
-  <section id="s8">
-    <h2>8. Permissions</h2>
-    <div class="cols-2">
-      <div>
-        <p><strong>Requested:</strong> Notification permission, used only to show reminders you create (classes, exams, assignments, attendance, study reminders). Notifications are generated on-device and never transmitted.</p>
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center gap-6">
+        <div class="flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 rounded-xl text-sm font-semibold tracking-tight text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Home</a>
+          <a href="index.html#features" class="px-3 py-2 rounded-xl text-sm font-semibold tracking-tight text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Features</a>
+          <a href="index.html#faq" class="px-3 py-2 rounded-xl text-sm font-semibold tracking-tight text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-white transition-colors">FAQ</a>
+          <a href="index.html#contact" class="px-3 py-2 rounded-xl text-sm font-semibold tracking-tight text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Contact</a>
+          <a href="privacy.html" class="px-3 py-2 rounded-xl text-sm font-semibold tracking-tight text-indigo-600 dark:text-indigo-400 transition-colors">Privacy Policy</a>
+          <a href="terms.html" class="px-3 py-2 rounded-xl text-sm font-semibold tracking-tight text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-xl border border-neutral-200 dark:border-white/5 text-neutral-700 dark:text-slate-300 hover:bg-neutral-100 dark:hover:bg-white/5 transition-colors">
+            <i data-lucide="moon" class="w-[18px] h-[18px] theme-icon-dark"></i>
+            <i data-lucide="sun" class="w-[18px] h-[18px] theme-icon-light hidden"></i>
+          </button>
+          <a href="https://play.google.com/store" target="_blank" rel="noreferrer" class="px-5 py-2 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-full text-sm font-bold shadow-xl shadow-neutral-900/10 dark:shadow-white/5 hover:opacity-90 transition-all hover:scale-[1.02]">
+            Get the App
+          </a>
+        </div>
       </div>
-      <div>
-        <p><strong>Not requested:</strong></p>
-        <ul class="plain">
-          <li>Camera, microphone</li>
-          <li>Contacts, SMS, phone</li>
-          <li>Location, calendar</li>
-          <li>Bluetooth / nearby devices</li>
-          <li>Body sensors, activity recognition</li>
-        </ul>
+
+      <!-- Mobile Actions -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <button id="theme-toggle-mobile" aria-label="Toggle Theme" class="p-2 rounded-xl border border-neutral-200 dark:border-white/5 text-neutral-700 dark:text-slate-300">
+          <i data-lucide="moon" class="w-[18px] h-[18px] theme-icon-dark"></i>
+          <i data-lucide="sun" class="w-[18px] h-[18px] theme-icon-light hidden"></i>
+        </button>
+        <button id="mobile-menu-btn" aria-label="Toggle Menu" class="p-2 rounded-xl text-neutral-700 dark:text-slate-300 hover:bg-neutral-100 dark:hover:bg-white/5">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="s9">
-    <h2>9. Import and Export</h2>
-    <p>The optional backup feature is user-initiated. Exported files are saved to a location you choose and never reach the developer or any server. Imported files are read and merged locally only. You are responsible for safeguarding any exported backup files.</p>
-  </section>
-
-  <section id="s10">
-    <h2>10. Data Security</h2>
-    <p>Safeguards include local storage via Room Database, no developer-managed remote database, no automatic data transmission, least-privilege permissions, and an offline-first architecture. No method guarantees absolute security — keep your device and screen lock updated, and manage exported backups securely.</p>
-  </section>
-
-  <section id="s11">
-    <h2>11. Retention and Deletion</h2>
-    <p>Data stays on your device until you delete individual entries, clear app data via Android Settings, import a replacing backup, or uninstall the App. The developer holds no copies and cannot recover deleted data. Since no remote database exists, there is nothing to delete on the developer's side.</p>
-  </section>
-
-  <section id="s12">
-    <h2>12. No User Accounts</h2>
-    <p>No registration is required — no username, password, email/phone verification, or social login (Google, Facebook, Apple) is needed to use any feature.</p>
-  </section>
-
-  <section id="s13">
-    <h2>13. Third-Party Services and Advertising</h2>
-    <p>The App does not integrate AdMob, Firebase (Analytics, Crashlytics, FCM), Google/Facebook sign-in, or any third-party analytics/advertising SDK. It shows no banner, interstitial, or rewarded ads, and does not profile users or sell data for advertising. Any future integration will be disclosed here in advance.</p>
-  </section>
-
-  <section id="s14">
-    <h2>14. Children's Privacy</h2>
-    <p>My Scheduler is built for students organising academic activity and is not directed at children below the age of consent under applicable law. Since data stays on-device with no registration, the developer does not knowingly receive personal information from children. Contact us if you believe otherwise.</p>
-  </section>
-
-  <section id="s15">
-    <h2>15. International Users</h2>
-    <p>Because user data is never transmitted to developer servers, no personal information is intentionally transferred across borders. Users remain responsible for complying with local laws.</p>
-  </section>
-
-  <section id="s16">
-    <h2>16. Google Play Compliance</h2>
-    <p>The developer complies with applicable Google Play policies on privacy, data transparency, minimisation, permissions, security, and consent. The Play Store's Data Safety section reflects the App's current practices.</p>
-  </section>
-
-  <section id="s17">
-    <h2>17. User Rights</h2>
-    <p>Since your data lives on your own device, you directly control accessing, correcting, exporting, or deleting it without needing to contact the developer. These actions are carried out within the App or via device settings.</p>
-  </section>
-
-  <section id="s18">
-    <h2>18. Future Features</h2>
-    <p>If features such as cloud sync, accounts, analytics, crash reporting, advertising, or subscriptions are introduced, this policy will be updated beforehand, with any new data practices disclosed.</p>
-  </section>
-
-  <section id="s19">
-    <h2>19. Changes to This Policy</h2>
-    <p>This policy may be revised to reflect app improvements or legal requirements. The Effective Date will be updated and the latest version published at the policy URL above. Continued use after an update constitutes acceptance.</p>
-  </section>
-
-  <section id="s20">
-    <h2>20. Liability and Governing Law</h2>
-    <p>The App is provided "as is." The developer is not liable for loss of local data, device malfunction, user error, backup corruption, unauthorised device access, or force majeure events. Regular backups via the export feature are recommended. This policy is governed by the laws of India, with disputes subject to Indian courts.</p>
-  </section>
-
-  <section id="s21">
-    <h2>21. Contact</h2>
-    <div class="card contact-grid">
-      <div><span>Developer</span>Pabitra Khandual</div>
-      <div><span>Application</span>My Scheduler</div>
-      <div><span>Package</span>com.myscheduler.app</div>
-      <div><span>Email</span><a href="mailto:hello.myscheduler@gmail.com">hello.myscheduler@gmail.com</a></div>
-      <div><span>Policy URL</span><a href="https://my-scheduler.github.io/privacy.html">my-scheduler.github.io/privacy.html</a></div>
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="hidden lg:hidden border-b border-neutral-200 dark:border-white/5 bg-white dark:bg-[#030712] overflow-hidden">
+    <div class="px-4 pt-2 pb-6 space-y-4">
+      <div class="space-y-1">
+        <a href="index.html" class="block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-neutral-700 dark:text-slate-300 hover:bg-neutral-100 dark:hover:bg-white/5">Home</a>
+        <a href="index.html#features" class="block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-neutral-700 dark:text-slate-300 hover:bg-neutral-100 dark:hover:bg-white/5">Features</a>
+        <a href="index.html#faq" class="block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-neutral-700 dark:text-slate-300 hover:bg-neutral-100 dark:hover:bg-white/5">FAQ</a>
+        <a href="index.html#contact" class="block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-neutral-700 dark:text-slate-300 hover:bg-neutral-100 dark:hover:bg-white/5">Contact</a>
+        <a href="privacy.html" class="block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400">Privacy Policy</a>
+        <a href="terms.html" class="block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-neutral-700 dark:text-slate-300 hover:bg-neutral-100 dark:hover:bg-white/5">Terms &amp; Conditions</a>
+      </div>
+      <div class="pt-2">
+        <a href="https://play.google.com/store" target="_blank" rel="noreferrer" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/15">
+          <i data-lucide="play" class="w-4 h-4"></i><span>Get the App</span>
+        </a>
+      </div>
     </div>
-    <p style="margin-top:12px;">By using My Scheduler, you acknowledge you've read this policy, understand your data is stored locally on your device, and accept responsibility for protecting exported backups and securing your device.</p>
-  </section>
+  </div>
+</nav>
 
+<!-- ============ PRIVACY POLICY CONTENT ============ -->
+<main class="pt-24 pb-12 relative">
+  <div class="absolute top-0 left-1/4 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
+    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-bold text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/5 rounded-xl transition-all mb-8 cursor-pointer">
+      <i data-lucide="chevron-left" class="w-4 h-4"></i><span>Back to Home</span>
+    </a>
+
+    <div class="bg-white dark:bg-[#111827]/40 backdrop-blur-md border border-neutral-200 dark:border-white/5 p-6 sm:p-12 rounded-[32px] shadow-xl shadow-neutral-100/30 dark:shadow-none">
+
+      <div class="space-y-8 text-neutral-700 dark:text-slate-300">
+        <div class="border-b border-neutral-200 dark:border-white/5 pb-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-mono">Legal</span>
+          <h1 class="text-3xl sm:text-4xl font-display font-bold text-neutral-900 dark:text-white tracking-tight mt-2">Privacy Policy</h1>
+          <p class="text-xs text-neutral-500 dark:text-slate-400 mt-2">Last Updated: July 05, 2026. This Privacy Policy governs your use of My Scheduler.</p>
+        </div>
+
+        <div class="space-y-6 text-sm leading-relaxed">
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">1. Information We Collect</h2>
+            <p>We do not collect personal identify profiles automatically. The data parsed through your college timetables (such as course names, professors, room schedules) is stored entirely inside your local sandbox filesystem. When using local manual photo uploads, data is processed securely.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">2. How We Use Information</h2>
+            <p>All structured academic entries we process are utilized to render visual calendars, calculate current academic ratios, generate localized task timers, and organize grades in the CGPA module.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">3. AI Features</h2>
+            <p>For the AI Timetable and Academic Holiday imports, images and document blobs are transmitted to secure Gemini endpoints over HTTPS encryption. These document slices are processed transitively to resolve tables into JSON; they are never persisted or utilized for model-training pipelines.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">4. Analytics</h2>
+            <p>We leverage localized diagnostic logs and crash diagnostics to isolate threading issues. These diagnostics contain no personal variables, schedules, or academic grades.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">5. Advertising</h2>
+            <p>My Scheduler features clean, optional non-personalized advertisements which are restricted from accessing calendars or reading your stored course metrics.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">6. Data Security</h2>
+            <p>Your local databases are encrypted using native Android sandbox protection, making your data inaccessible to secondary third-party apps on your phone.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">7. Children's Privacy</h2>
+            <p>Our academic companion complies with COPPA. We do not gather or maintain files from users under the age of 13 knowingly.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">8. Permissions Used</h2>
+            <p>The applet requests CAMERA permission (to snap timetable boards), STORAGE permission (to select calendar PDFs), and NOTIFICATION permission (to trigger class and homework alert timers).</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">9. Third-party Services</h2>
+            <p>We work with trusted services including Google Play Services, Firebase Crashlytics, and Gemini extraction APIs to drive continuous system updates.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">10. Data Retention</h2>
+            <p>All academic schedules are preserved indefinitely on your local smartphone. Removing the application purges all local databases automatically.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">11. Contact Information</h2>
+            <p>For any queries relating to student telemetry or storage encryptions, contact us at: <a href="mailto:support@myscheduler.app" class="text-indigo-600 dark:text-indigo-400 underline">support@myscheduler.app</a>.</p>
+          </section>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-neutral-900 dark:text-white uppercase tracking-wide">12. Changes to Policy</h2>
+            <p>We reserve the right to revise this Privacy Policy periodically. Continued use of the application indicates full acceptance of revised terms.</p>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </main>
 
-<footer>
-  © 2026 Pabitra Khandual — My Scheduler Privacy Policy
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[#f8fafc] text-neutral-800 pt-16 pb-8 border-t border-neutral-200/60 transition-colors relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <div class="relative rounded-[32px] bg-gradient-to-r from-indigo-50 via-slate-50 to-purple-50 p-8 md:p-12 mb-16 overflow-hidden border border-indigo-100/60 shadow-sm">
+      <div class="absolute top-0 right-0 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-10 -left-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+        <div class="space-y-3 max-w-xl">
+          <h3 class="text-2xl sm:text-3xl font-display font-extrabold tracking-tight text-neutral-900">Ready to Boost Your Semester Grades?</h3>
+          <p class="text-neutral-600 text-sm leading-relaxed">Download My Scheduler from the Google Play Store today and take full control of your classes, deadlines, and attendance.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-4 flex-shrink-0">
+          <a href="https://play.google.com/store" target="_blank" rel="noreferrer" class="group flex items-center gap-3 bg-neutral-900 hover:bg-neutral-800 text-white px-6 py-3 rounded-full shadow-md transition-all hover:scale-105 border border-neutral-800">
+            <i data-lucide="play" class="w-5 h-5 text-indigo-400 group-hover:scale-110 transition-transform"></i>
+            <div class="text-left">
+              <span class="block text-[8px] uppercase font-bold text-neutral-300 tracking-wider">GET IT ON</span>
+              <span class="block text-sm font-bold tracking-tight text-white leading-none mt-0.5">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-neutral-200/60">
+      <div class="md:col-span-5 space-y-4 text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2">
+          <img src="https://i.ibb.co/ns7wbV9Y/custom-app-icon.png" alt="My Scheduler Logo" referrerpolicy="no-referrer" class="w-9 h-9 rounded-xl object-contain shadow-md" />
+          <span class="font-display font-bold text-lg tracking-tight text-neutral-900">My Scheduler</span>
+        </div>
+        <p class="text-neutral-500 text-xs leading-relaxed max-w-sm">Your comprehensive student planner, utilizing secure local sandboxed data and modern generative artificial intelligence to streamline university life.</p>
+      </div>
+
+      <div class="md:col-span-7 flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-3 items-center">
+        <a href="index.html" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">Home</a>
+        <a href="index.html#features" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">Features</a>
+        <a href="index.html#screenshots" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">Screenshots</a>
+        <a href="index.html#testimonials" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">Testimonials</a>
+        <a href="index.html#faq" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">FAQ</a>
+        <a href="index.html#feedback" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">Feedback</a>
+        <a href="index.html#report-bug" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">Report Bug</a>
+        <a href="privacy.html" class="text-sm text-indigo-600 transition-colors cursor-pointer font-medium">Privacy Policy</a>
+        <a href="terms.html" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">Terms &amp; Conditions</a>
+        <a href="index.html#contact" class="text-sm text-neutral-600 hover:text-indigo-600 transition-colors cursor-pointer font-medium">Contact</a>
+      </div>
+    </div>
+
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500 text-xs font-medium">
+      <div>&copy; <span id="footer-year"></span> My Scheduler App. All rights reserved.</div>
+      <div class="flex items-center gap-1.5 font-mono">
+        <i data-lucide="shield" class="w-3.5 h-3.5 text-indigo-600"></i><span>Secure &amp; Offline Academic Companion</span>
+      </div>
+    </div>
+  </div>
 </footer>
 
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to Top" class="hidden fixed bottom-6 right-6 z-50 p-3 sm:p-3.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:scale-110 active:scale-95 transition-all duration-200 border border-indigo-500/20 cursor-pointer items-center justify-center focus:outline-none focus:ring-2 focus:ring-indigo-500/40">
+  <i data-lucide="chevron-up" class="w-[18px] h-[18px] stroke-[3]"></i>
+</button>
+
+<script>
+function refreshIcons() { if (window.lucide) lucide.createIcons(); }
+
+/* ============ THEME TOGGLE ============ */
+function applyTheme(isDark) {
+  document.documentElement.classList.toggle('dark', isDark);
+  document.querySelectorAll('.theme-icon-dark').forEach(el => el.classList.toggle('hidden', isDark));
+  document.querySelectorAll('.theme-icon-light').forEach(el => el.classList.toggle('hidden', !isDark));
+}
+(function initTheme() {
+  const saved = localStorage.getItem('theme');
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved === 'dark' || (!saved && systemDark));
+})();
+function toggleTheme() {
+  const isDark = !document.documentElement.classList.contains('dark');
+  applyTheme(isDark);
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme);
+
+/* ============ NAVBAR SCROLL EFFECT ============ */
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    nav.classList.add('bg-white/75', 'dark:bg-[#030712]/75', 'backdrop-blur-xl', 'shadow-lg', 'border-b', 'border-neutral-200/50', 'dark:border-white/5', 'py-3');
+    nav.classList.remove('py-5', 'bg-transparent');
+  } else {
+    nav.classList.remove('bg-white/75', 'dark:bg-[#030712]/75', 'backdrop-blur-xl', 'shadow-lg', 'border-b', 'border-neutral-200/50', 'dark:border-white/5', 'py-3');
+    nav.classList.add('py-5', 'bg-transparent');
+  }
+}, { passive: true });
+
+/* ============ MOBILE MENU ============ */
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileDrawer = document.getElementById('mobile-drawer');
+mobileMenuBtn.addEventListener('click', () => {
+  const isOpen = !mobileDrawer.classList.contains('hidden');
+  mobileDrawer.classList.toggle('hidden');
+  mobileMenuBtn.innerHTML = isOpen ? '<i data-lucide="menu" class="w-6 h-6"></i>' : '<i data-lucide="x" class="w-6 h-6"></i>';
+  refreshIcons();
+});
+
+/* ============ BACK TO TOP ============ */
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) { backToTop.classList.remove('hidden'); backToTop.classList.add('flex'); }
+  else { backToTop.classList.add('hidden'); backToTop.classList.remove('flex'); }
+}, { passive: true });
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ============ FOOTER YEAR ============ */
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+refreshIcons();
+</script>
 </body>
 </html>
