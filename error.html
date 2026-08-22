@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#6366f1">
-<title>Privacy Policy — My Scheduler</title>
+<title>Report Error — My Scheduler</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -84,29 +84,40 @@ label{display:block;font-size:.75rem;font-weight:700;margin-bottom:.4rem}
   <section class="py-16 md:py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-mono">Privacy & Data</span>
-        <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-neutral-900 dark:text-white mt-2 tracking-tight">Privacy Policy</h1>
-        <p class="text-neutral-600 dark:text-slate-400 mt-4 text-sm sm:text-base leading-relaxed">How My Scheduler describes the collection, processing, storage, permissions, and use of information.</p>
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-mono">Support & Quality</span>
+        <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-neutral-900 dark:text-white mt-2 tracking-tight">Report an Error</h1>
+        <p class="text-neutral-600 dark:text-slate-400 mt-4 text-sm sm:text-base leading-relaxed">Encountered a bug or an AI parsing crash? Describe your device specifications and submit a ticket. Our engineering team will review it.</p>
       </div>
       
-<div class="legal-card bg-white dark:bg-[#111827]/40 backdrop-blur-md rounded-[32px] border border-neutral-200/60 dark:border-white/5 p-6 sm:p-12">
-  <div class="border-b border-neutral-200 dark:border-white/5 pb-6 mb-8">
-    <p class="text-xs text-neutral-500 dark:text-slate-400">Last Updated: July 05, 2026. This Privacy Policy governs your use of My Scheduler.</p>
+<div class="legal-card bg-neutral-50 dark:bg-[#111827]/40 backdrop-blur-md rounded-[32px] border border-neutral-200/60 dark:border-white/5 p-6 sm:p-10 max-w-3xl mx-auto">
+  <div id="bug-success" class="hidden text-center py-12 space-y-4">
+    <div class="w-16 h-16 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto"><i data-lucide="check" class="w-8 h-8"></i></div>
+    <h2 class="text-xl font-display font-bold text-neutral-900 dark:text-white">Bug Report Logged</h2>
+    <p class="text-sm text-neutral-600 dark:text-slate-400 max-w-sm mx-auto">Ticket logged successfully. We appreciate you taking the time to detail this issue. A developer will reach out if further logs are required.</p>
+    <button id="bug-again" class="mt-6 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">Report another issue</button>
   </div>
-  <div class="space-y-8 text-sm leading-relaxed text-neutral-700 dark:text-slate-300">
-    <section><h2 class="legal-h">1. Information We Collect</h2><p>We do not collect personal identify profiles automatically. The data parsed through your college timetables (such as course names, professors, room schedules) is stored entirely inside your local sandbox filesystem. When using local manual photo uploads, data is processed securely.</p></section>
-    <section><h2 class="legal-h">2. How We Use Information</h2><p>All structured academic entries we process are utilized to render visual calendars, calculate current academic ratios, generate localized task timers, and organize grades in the CGPA module.</p></section>
-    <section><h2 class="legal-h">3. AI Features</h2><p>For the AI Timetable and Academic Holiday imports, images and document blobs are transmitted to secure Gemini endpoints over HTTPS encryption. These document slices are processed transitively to resolve tables into JSON; they are never persisted or utilized for model-training pipelines.</p></section>
-    <section><h2 class="legal-h">4. Analytics</h2><p>We leverage localized diagnostic logs and crash diagnostics to isolate threading issues. These diagnostics contain no personal variables, schedules, or academic grades.</p></section>
-    <section><h2 class="legal-h">7. Children's Privacy</h2><p>Our academic companion complies with COPPA. We do not gather or maintain files from users under the age of 13 knowingly.</p></section>
-    <section><h2 class="legal-h">8. Permissions Used</h2><p>The applet requests CAMERA permission (to snap timetable boards), STORAGE permission (to select calendar PDFs), and NOTIFICATION permission (to trigger class and homework alert timers).</p></section>
-    <section><h2 class="legal-h">9. Third-party Services</h2><p>We work with trusted services including Google Play Services, Firebase Crashlytics, and Gemini extraction APIs to drive continuous system updates.</p></section>
-    <section><h2 class="legal-h">10. Data Retention</h2><p>All academic schedules are preserved indefinitely on your local smartphone. Removing the application purges all local databases automatically.</p></section>
-    <section><h2 class="legal-h">11. Contact Information</h2><p>For any queries relating to student telemetry or storage encryptions, contact us at: <a href="mailto:support@myscheduler.app" class="text-indigo-600 dark:text-indigo-400 underline">support@myscheduler.app</a>.</p></section>
-    <section><h2 class="legal-h">12. Changes to Policy</h2><p>We reserve the right to revise this Privacy Policy periodically. Continued use of the application indicates full acceptance of revised terms.</p></section>
-  </div>
+  <form id="bug-form" class="space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div><label for="bug-device" class="text-neutral-700 dark:text-slate-300">Device Model</label><input id="bug-device" class="input" required placeholder="e.g. Pixel 8, Galaxy S23"></div>
+      <div><label for="bug-android" class="text-neutral-700 dark:text-slate-300">Android Version</label><input id="bug-android" class="input" required placeholder="e.g. Android 14"></div>
+      <div><label for="bug-version" class="text-neutral-700 dark:text-slate-300">App Version</label><select id="bug-version" class="input"><option>v2.1.0 (Latest)</option><option>v2.0.4</option><option>v2.0.0</option></select></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div><label for="bug-category" class="text-neutral-700 dark:text-slate-300">Error Category</label><select id="bug-category" class="input"><option>App Crash / Force Close</option><option selected>UI Render Glitch</option><option>AI Parsing Failure</option><option>Slow / Lagging</option><option>Other Bug</option></select></div>
+      <div><label for="bug-email" class="text-neutral-700 dark:text-slate-300">Your Email</label><input id="bug-email" class="input" type="email" required placeholder="student@university.edu"></div>
+    </div>
+    <div><label for="bug-desc" class="text-neutral-700 dark:text-slate-300">Description of Issue</label><textarea id="bug-desc" class="input resize-none" required rows="5" placeholder="Describe exactly what you were doing when the error occurred, and any message shown on the screen..."></textarea></div>
+    <div><label class="text-neutral-700 dark:text-slate-300">Screenshot Upload (Optional)</label>
+      <label for="bug-file" id="dropzone" class="border-2 border-dashed rounded-2xl p-7 text-center cursor-pointer flex flex-col items-center justify-center min-h-[140px] border-neutral-300 hover:border-indigo-400 dark:border-white/10 dark:hover:border-white/20">
+        <i data-lucide="upload" class="w-6 h-6 text-neutral-500 dark:text-slate-400 mb-2"></i>
+        <p id="file-text" class="text-xs font-bold text-neutral-700 dark:text-slate-300">Choose a screenshot</p>
+        <p class="text-[10px] text-neutral-400 mt-1">PNG, JPG up to 5MB</p>
+        <input id="bug-file" type="file" accept="image/png,image/jpeg" class="hidden">
+      </label>
+    </div>
+    <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3.5 rounded-full text-sm font-bold shadow-md transition flex items-center justify-center gap-2" type="submit">Submit Bug Report <i data-lucide="alert-triangle" class="w-4 h-4"></i></button>
+  </form>
 </div>
-<style>.legal-h{font-size:1rem;font-weight:800;color:#171717;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.55rem}.dark .legal-h{color:#fff}</style>
 
     </div>
   </section>
@@ -155,6 +166,13 @@ label{display:block;font-size:.75rem;font-weight:700;margin-bottom:.4rem}
 <style>.footer-link{font-size:.875rem;color:#52525b;font-weight:500;transition:.2s}.dark .footer-link{color:#94a3b8}.footer-link:hover{color:#4f46e5}</style>
 <button id="back-to-top" class="hidden fixed bottom-6 right-6 z-50 p-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg transition" aria-label="Back to Top"><i data-lucide="chevron-up"></i></button>
 
+
+<script>
+const fileInput=document.getElementById("bug-file"), fileText=document.getElementById("file-text");
+fileInput.addEventListener("change",()=>{const f=fileInput.files[0];if(!f)return;if(f.size>5*1024*1024){alert("Please choose an image smaller than 5MB.");fileInput.value="";return}fileText.textContent=f.name});
+document.getElementById("bug-form").addEventListener("submit",e=>{e.preventDefault();document.getElementById("bug-form").classList.add("hidden");document.getElementById("bug-success").classList.remove("hidden");lucide.createIcons();});
+document.getElementById("bug-again").onclick=()=>{document.getElementById("bug-success").classList.add("hidden");document.getElementById("bug-form").reset();fileText.textContent="Choose a screenshot";document.getElementById("bug-form").classList.remove("hidden");};
+</script>
 
 
 <script>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#6366f1">
-<title>Privacy Policy — My Scheduler</title>
+<title>Feedback — My Scheduler</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -84,29 +84,42 @@ label{display:block;font-size:.75rem;font-weight:700;margin-bottom:.4rem}
   <section class="py-16 md:py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-mono">Privacy & Data</span>
-        <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-neutral-900 dark:text-white mt-2 tracking-tight">Privacy Policy</h1>
-        <p class="text-neutral-600 dark:text-slate-400 mt-4 text-sm sm:text-base leading-relaxed">How My Scheduler describes the collection, processing, storage, permissions, and use of information.</p>
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-mono">Share Your Experience</span>
+        <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-neutral-900 dark:text-white mt-2 tracking-tight">Send Us Feedback</h1>
+        <p class="text-neutral-600 dark:text-slate-400 mt-4 text-sm sm:text-base leading-relaxed">We review every piece of feedback to refine My Scheduler. Let us know what features you want or how we can improve.</p>
       </div>
       
-<div class="legal-card bg-white dark:bg-[#111827]/40 backdrop-blur-md rounded-[32px] border border-neutral-200/60 dark:border-white/5 p-6 sm:p-12">
-  <div class="border-b border-neutral-200 dark:border-white/5 pb-6 mb-8">
-    <p class="text-xs text-neutral-500 dark:text-slate-400">Last Updated: July 05, 2026. This Privacy Policy governs your use of My Scheduler.</p>
+<div class="legal-card bg-white dark:bg-[#111827]/40 backdrop-blur-md rounded-[32px] border border-neutral-200/60 dark:border-white/5 p-6 sm:p-10 max-w-2xl mx-auto">
+  <div id="feedback-success" class="hidden text-center py-12 space-y-4">
+    <div class="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto"><i data-lucide="check" class="w-8 h-8"></i></div>
+    <h2 class="text-xl font-display font-bold text-neutral-900 dark:text-white">Feedback Sent!</h2>
+    <p class="text-sm text-neutral-600 dark:text-slate-400 max-w-sm mx-auto">Thank you for sharing your thoughts. Your feedback plays a crucial role in building better updates for students worldwide.</p>
+    <button id="feedback-again" class="mt-6 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">Send another message</button>
   </div>
-  <div class="space-y-8 text-sm leading-relaxed text-neutral-700 dark:text-slate-300">
-    <section><h2 class="legal-h">1. Information We Collect</h2><p>We do not collect personal identify profiles automatically. The data parsed through your college timetables (such as course names, professors, room schedules) is stored entirely inside your local sandbox filesystem. When using local manual photo uploads, data is processed securely.</p></section>
-    <section><h2 class="legal-h">2. How We Use Information</h2><p>All structured academic entries we process are utilized to render visual calendars, calculate current academic ratios, generate localized task timers, and organize grades in the CGPA module.</p></section>
-    <section><h2 class="legal-h">3. AI Features</h2><p>For the AI Timetable and Academic Holiday imports, images and document blobs are transmitted to secure Gemini endpoints over HTTPS encryption. These document slices are processed transitively to resolve tables into JSON; they are never persisted or utilized for model-training pipelines.</p></section>
-    <section><h2 class="legal-h">4. Analytics</h2><p>We leverage localized diagnostic logs and crash diagnostics to isolate threading issues. These diagnostics contain no personal variables, schedules, or academic grades.</p></section>
-    <section><h2 class="legal-h">7. Children's Privacy</h2><p>Our academic companion complies with COPPA. We do not gather or maintain files from users under the age of 13 knowingly.</p></section>
-    <section><h2 class="legal-h">8. Permissions Used</h2><p>The applet requests CAMERA permission (to snap timetable boards), STORAGE permission (to select calendar PDFs), and NOTIFICATION permission (to trigger class and homework alert timers).</p></section>
-    <section><h2 class="legal-h">9. Third-party Services</h2><p>We work with trusted services including Google Play Services, Firebase Crashlytics, and Gemini extraction APIs to drive continuous system updates.</p></section>
-    <section><h2 class="legal-h">10. Data Retention</h2><p>All academic schedules are preserved indefinitely on your local smartphone. Removing the application purges all local databases automatically.</p></section>
-    <section><h2 class="legal-h">11. Contact Information</h2><p>For any queries relating to student telemetry or storage encryptions, contact us at: <a href="mailto:support@myscheduler.app" class="text-indigo-600 dark:text-indigo-400 underline">support@myscheduler.app</a>.</p></section>
-    <section><h2 class="legal-h">12. Changes to Policy</h2><p>We reserve the right to revise this Privacy Policy periodically. Continued use of the application indicates full acceptance of revised terms.</p></section>
-  </div>
+  <form id="feedback-form" class="space-y-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div><label for="feedback-name" class="text-neutral-700 dark:text-slate-300">Your Name</label><input id="feedback-name" class="input" type="text" required placeholder="e.g. Pabitra Khandual"></div>
+      <div><label for="feedback-email" class="text-neutral-700 dark:text-slate-300">Email Address</label><input id="feedback-email" class="input" type="email" required placeholder="name@university.edu"></div>
+    </div>
+    <div><label class="text-neutral-700 dark:text-slate-300">Feedback Category</label>
+      <div class="flex flex-wrap gap-2" id="feedback-types">
+        <button type="button" data-type="General Feedback" class="chip active">General Feedback</button>
+        <button type="button" data-type="Feature Request" class="chip">Feature Request</button>
+        <button type="button" data-type="UI/UX Polish" class="chip">UI/UX Polish</button>
+        <button type="button" data-type="Other Queries" class="chip">Other Queries</button>
+      </div>
+    </div>
+    <div><label class="text-neutral-700 dark:text-slate-300">App Experience Rating</label><div id="stars" class="flex gap-1"></div><p id="rating-label" class="text-xs text-neutral-500 dark:text-slate-400 mt-2">Amazing!</p></div>
+    <div><label for="feedback-message" class="text-neutral-700 dark:text-slate-300">Your Message</label><textarea id="feedback-message" class="input resize-none" required rows="5" placeholder="Tell us what you love or what needs tuning..."></textarea></div>
+    <button class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3.5 rounded-full text-sm font-bold shadow-lg transition flex items-center justify-center gap-2" type="submit">Submit Feedback <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+  </form>
 </div>
-<style>.legal-h{font-size:1rem;font-weight:800;color:#171717;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.55rem}.dark .legal-h{color:#fff}</style>
+<style>
+.chip{padding:.55rem .85rem;border-radius:999px;border:1px solid #e5e7eb;background:#f9fafb;color:#52525b;font-size:.75rem;font-weight:600}
+.dark .chip{border-color:rgba(255,255,255,.07);background:rgba(3,7,18,.6);color:#94a3b8}
+.chip.active{background:#4f46e5;border-color:#4f46e5;color:#fff}
+.star{cursor:pointer;color:#d4d4d8}.star.active{color:#f59e0b;fill:#f59e0b}
+</style>
 
     </div>
   </section>
@@ -155,6 +168,16 @@ label{display:block;font-size:.75rem;font-weight:700;margin-bottom:.4rem}
 <style>.footer-link{font-size:.875rem;color:#52525b;font-weight:500;transition:.2s}.dark .footer-link{color:#94a3b8}.footer-link:hover{color:#4f46e5}</style>
 <button id="back-to-top" class="hidden fixed bottom-6 right-6 z-50 p-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg transition" aria-label="Back to Top"><i data-lucide="chevron-up"></i></button>
 
+
+<script>
+const fbTypes=document.querySelectorAll(".chip"), fbStars=document.getElementById("stars"), fbLabel=document.getElementById("rating-label");
+let fbType="General Feedback", fbRating=5;
+fbTypes.forEach(b=>b.onclick=()=>{fbTypes.forEach(x=>x.classList.remove("active"));b.classList.add("active");fbType=b.dataset.type});
+for(let i=1;i<=5;i++){const s=document.createElement("button");s.type="button";s.innerHTML='<i data-lucide="star" class="w-6 h-6 star"></i>';s.onclick=()=>{fbRating=i;document.querySelectorAll(".star").forEach((x,j)=>x.classList.toggle("active",j<i));fbLabel.textContent=["Poor","Needs Improvement","Good","Great","Amazing!"][i-1]};fbStars.appendChild(s)}
+document.querySelectorAll(".star").forEach(x=>x.classList.add("active"));
+document.getElementById("feedback-form").addEventListener("submit",e=>{e.preventDefault();document.getElementById("feedback-form").classList.add("hidden");document.getElementById("feedback-success").classList.remove("hidden");lucide.createIcons();});
+document.getElementById("feedback-again").onclick=()=>{document.getElementById("feedback-success").classList.add("hidden");document.getElementById("feedback-form").reset();document.getElementById("feedback-form").classList.remove("hidden");};
+</script>
 
 
 <script>
